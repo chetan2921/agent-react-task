@@ -9,8 +9,8 @@ The repository also keeps the original analysis files:
 
 ## Demo Videos
 
-- [SoleHead Flutter demo video](https://drive.google.com/file/d/15UijcH4PluGg1IgPyXJesrN8jz5l7_AK/view?usp=sharing)
-- [SoleHead React demo video](https://drive.google.com/file/d/17mi44t5YLEMNiNyT9HFqvpGf3HaQlvCN/view?usp=sharing)
+- [SoleHead Flutter demo video](solehead-flutter/README.md)
+- [SoleHead React demo video](solehead-react/README.md)
 
 ## Tech Stack
 
