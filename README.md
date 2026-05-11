@@ -7,6 +7,11 @@ The repository also keeps the original analysis files:
 - `agent.md`: reusable repository analysis guide
 - `solehead_agent.md`: analysis report for the original Flutter SoleHead app
 
+## Demo Videos
+
+- [SoleHead Flutter demo video](https://drive.google.com/file/d/15UijcH4PluGg1IgPyXJesrN8jz5l7_AK/view?usp=sharing)
+- [SoleHead React demo video](https://drive.google.com/file/d/17mi44t5YLEMNiNyT9HFqvpGf3HaQlvCN/view?usp=sharing)
+
 ## Tech Stack
 
 - Expo SDK 54
