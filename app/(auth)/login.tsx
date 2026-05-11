@@ -12,20 +12,20 @@ import { colors, spacing } from '@/theme';
 
 export default function LoginScreen() {
   const { login } = useAuth();
-  const [email, setEmail] = useState('chetan@example.com');
+  const [userId, setUserId] = useState('chetan123');
   const [password, setPassword] = useState('password');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
   const submit = async () => {
     setError('');
-    if (!email.trim() || !password.trim()) {
-      setError('Email and password are required.');
+    if (!userId.trim() || !password.trim()) {
+      setError('User ID and password are required.');
       return;
     }
     setLoading(true);
     try {
-      await login(email.trim(), password);
+      await login(userId.trim(), password);
       router.replace('/feed');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Login failed.');
@@ -38,20 +38,19 @@ export default function LoginScreen() {
     <AppScreen contentStyle={styles.content}>
       <View style={styles.header}>
         <GradientText>Welcome back</GradientText>
-        <AppText muted>Use the seeded account or enter any known mock user email.</AppText>
+        <AppText muted>Enter any user ID and password to continue in mock mode.</AppText>
       </View>
       <View style={styles.form}>
         <View style={styles.demoCard}>
-          <AppText style={styles.demoTitle}>Demo account</AppText>
-          <AppText muted>chetan@example.com / password</AppText>
+          <AppText style={styles.demoTitle}>Mock login</AppText>
+          <AppText muted>Any non-empty user ID and password will sign you in.</AppText>
         </View>
         <AppInput
-          label="Email"
+          label="User ID"
           autoCapitalize="none"
-          keyboardType="email-address"
-          value={email}
-          onChangeText={setEmail}
-          placeholder="you@example.com"
+          value={userId}
+          onChangeText={setUserId}
+          placeholder="chetan123"
         />
         <AppInput
           label="Password"

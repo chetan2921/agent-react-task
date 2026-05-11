@@ -106,6 +106,19 @@ npm run android
 npm run web
 ```
 
+## Mock Login
+
+The app is currently in mock mode. On the login screen, enter any non-empty user ID and any non-empty password to continue.
+
+Example:
+
+```text
+User ID: chetan123
+Password: password
+```
+
+The mock repository falls back to a seeded user when the entered user ID does not match an existing mock account. This keeps the interview demo easy to open without backend credentials.
+
 ## Reload During Development
 
 Expo Fast Refresh usually updates the app when you save a file.

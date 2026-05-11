@@ -11,6 +11,12 @@ describe('mock repositories', () => {
     expect(user.username).toBe('chetan');
   });
 
+  it('allows mock login with any user id and password', async () => {
+    const user = await repositories.auth.login({ email: 'anything', password: 'anything' });
+
+    expect(user.id).toBeTruthy();
+  });
+
   it('toggles post likes for a user', async () => {
     const first = await repositories.posts.toggleLike('p-1', 'u-4');
     const second = await repositories.posts.toggleLike('p-1', 'u-4');
